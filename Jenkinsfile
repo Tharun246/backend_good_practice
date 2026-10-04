@@ -1,12 +1,12 @@
-pipeline {
-    agent any
+    pipeline {
+        agent any
 
-    stages {
+        stages {
 
-        stage('Build & Test') {
-            steps {
-                sh './mvnw clean package'
+            stage('Build & Test') {
+                steps {
+                    sh './mvnw clean package'
+                }
             }
         }
     }
-}
