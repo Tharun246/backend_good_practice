@@ -5,7 +5,10 @@
 
             stage('Build & Test') {
                 steps {
-                    sh './mvnw clean package'
+                    sh '''
+                           chmod +x mvnw
+                           ./mvnw clean package
+                        '''
                 }
             }
         }
